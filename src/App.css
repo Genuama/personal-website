@@ -1,0 +1,159 @@
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header,
+/* Ensure body and root div fill the entire viewport */
+body,
+#root,
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+  /* Main content will grow to take available space */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  width: 100%;
+}
+
+
+/* Navigation Styles */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #c9d6ff;
+  /* Lighter shade on hover */
+}
+
+/* Main Section Styling */
+main {
+  max-width: 800px;
+  margin: 2em auto;
+  text-align: center;
+}
+
+.hero {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  padding: 5em 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin: 0.5em 0;
+}
+
+.hero button {
+  padding: 0.8em 1.5em;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero button:hover {
+  background-color: #f0f0f0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+#skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  list-style: none;
+}
+
+#skills-container li {
+  background-color: #f4f4f4;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+#skills-container li:hover {
+  transform: translateY(-5px);
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  z-index: 1000;
+  padding: 1em 0;
+}
+
+nav ul li a {
+  padding: 10px 15px;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #6a11cb;
+  /* Matches the hero gradient */
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
